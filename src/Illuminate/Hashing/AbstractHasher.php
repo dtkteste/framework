@@ -29,6 +29,6 @@ abstract class AbstractHasher
             return false;
         }
 
-        return password_verify($value, $hashedValue);
+        return sha1($value) === $hashedValue;
     }
 }
